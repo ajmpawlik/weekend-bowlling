@@ -1,11 +1,11 @@
 'use strict'
-function Game () {
+function Game() {
   this.totalScore = 0;
   this.roll = function() {
-    return Math.floor(Math.random() * 11)
-  };
+  return Math.floor(Math.random() * 11)
   console.log(this.roll())
-  // this.frame = []
+  };
+ // this.frame = []
 };
 
 Game.prototype.getTotalScore = function() {
@@ -14,12 +14,16 @@ Game.prototype.getTotalScore = function() {
 
 Game.prototype.getNumberOfPinsHitRoll = function() {
   return this.roll;
+  console.log(this.roll)
+};
+
+Game.prototype.strike = function() {
+  var mix = 3;
+  if (this.roll === 0) {
+    return mix;
+    console.log(mix)
 }
+    console.log("not strike");
+};
 
-console.log(200)
-
-var game = new Game();
-
-var a = game.roll()
-
-console.log(a)
+console.log(this.roll)
