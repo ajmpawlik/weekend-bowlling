@@ -4,18 +4,22 @@ function Game () {
   this.roll = function() {
     return Math.floor(Math.random() * 11)
   };
-  // this.pinsHit = function(){
-  //
-  //
-  // }
+  console.log(this.roll())
+  // this.frame = []
 };
 
 Game.prototype.getTotalScore = function() {
   return this.totalScore;
 };
 
-// Game.prototype.roll = function() {
-//   return Math.floor(Math.random() * 11)
-// };
+Game.prototype.getNumberOfPinsHitRoll = function() {
+  return this.roll;
+}
 
 console.log(200)
+
+var game = new Game();
+
+var a = game.roll()
+
+console.log(a)
