@@ -11,9 +11,9 @@ describe ('Game', function() {
       expect(game.getTotalScore()).toEqual(0);
     })
 
-    it ('method roll returns the ouctome number of pins hit in this roll', function () {
-      expect(game.roll() >= 0 && game.roll() <= 10).toBeTruthy();
-    })
+    // it ('method roll returns the ouctome number of pins hit in this roll', function () {
+    //   expect(game.roll(4)).toEqual(4);
+    // })
 
     // it ('method getNumberOfPinsHitRoll shows the number of the pins hit in the roll', function () {
     //   expect(game.getNumberOfPinsHitRoll() === game.roll).toBeTruthy();

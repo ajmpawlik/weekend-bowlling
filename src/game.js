@@ -1,11 +1,14 @@
 'use strict'
 function Game() {
   this.totalScore = 0;
-  this.roll = function() {
-  return Math.floor(Math.random() * 11)
-  console.log(this.roll())
-  };
- // this.frame = []
+  this.frame = []
+  this.currentFrame = 0
+};
+
+Game.prototype.roll = function(pins) {
+this.frame[this.currentFrame] = pins;
+//  the other option could be making frame as array of arrays with meta array being a game
+// [[1, 2], [1, 2]......] if 1 < 10 this.frame[this.currentFrame][this.currentFrame]= pins (that is the second place in the inner array).
 };
 
 Game.prototype.getTotalScore = function() {
@@ -14,16 +17,10 @@ Game.prototype.getTotalScore = function() {
 
 Game.prototype.getNumberOfPinsHitRoll = function() {
   return this.roll;
-  console.log(this.roll)
 };
 
-Game.prototype.strike = function() {
-  var mix = 3;
-  if (this.roll === 0) {
-    return mix;
-    console.log(mix)
-}
-    console.log("not strike");
-};
+var game = new Game()
 
-console.log(this.roll)
+game.roll(3)
+
+console.log(game.frame);
