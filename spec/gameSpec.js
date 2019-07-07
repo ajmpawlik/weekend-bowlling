@@ -4,7 +4,7 @@ describe ('Game', function() {
   var game;
 
   beforeEach(function(){
-    game = new Game();
+      game = new Game();
   });
 
     it ('shows the score of the bowling game', function (){
@@ -13,18 +13,16 @@ describe ('Game', function() {
     })
 
     it ('shows the score of first roll', function (){
-      expect(game.roll(7)).toEqual([7]);
+      var random = Math.floor(Math.random() * 11);
+      expect(game.roll(random)).toEqual([random]);
     })
 
     it ('shows the score of the second roll', function (){
-      game.roll(8)
-      expect(game.roll(9)).toEqual([8,9]);
+      var randomRoll1 = Math.floor(Math.random() * 11);
+      var randomRoll2 = Math.floor(Math.random() * 11);
+      game.roll(randomRoll1)
+      expect(game.roll(randomRoll2)).toEqual([randomRoll1,randomRoll2]);
     })
-
-
-
-
-
 
 
     // it ('displays a Gutter game, when the player never hits the pin - 20 zero scores')
