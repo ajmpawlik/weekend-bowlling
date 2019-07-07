@@ -8,8 +8,28 @@ describe ('Game', function() {
   });
 
     it ('shows the score of the bowling game', function (){
+      // var game = new Game();
       expect(game.getTotalScore()).toEqual(0);
     })
+
+    it ('shows the score of first roll', function (){
+      expect(game.roll(7)).toEqual([7]);
+    })
+
+    it ('shows the score of the second roll', function (){
+      game.roll(8)
+      expect(game.roll(9)).toEqual([8,9]);
+    })
+
+
+
+
+
+
+
+    // it ('displays a Gutter game, when the player never hits the pin - 20 zero scores')
+    //   expect()
+    // it()
 
     // it ('method roll returns the ouctome number of pins hit in this roll', function () {
     //   expect(game.roll(4)).toEqual(4);
