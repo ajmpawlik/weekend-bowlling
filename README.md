@@ -40,6 +40,6 @@ I would like to be able to record all the scores when no pins have been stricken
 
 **Progress and limitations**
 
-While I was able to develop logic for three out if six MVP features (one frame, multiple frames, gutter game), I did not create the three remaining features (spares, strikes and final game). The user interface also remains to be done. The main issue was the time limitation for this project created by the external circumstances. Additionally, this is an effect of one week of learning JavaScript.
+While I was able to develop the logic for three out if six MVP features (one frame, multiple frames, gutter game), I did not create the three remaining features (spares, strikes and final game). The user interface also remains to be done. The main issue was the time limitation for this project created by the external circumstances. Additionally, this is an effect of one week of learning JavaScript, and hence the use of JS is basic. 
 
 I will revisit this assignment and work on finalisation of the implementation.  
