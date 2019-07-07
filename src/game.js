@@ -3,10 +3,16 @@ function Game() {
   this.totalScore = 0;
   this.allFrames = []
   this.frame = []
+  this.indexInFrame = 0
   this.currentFrame = 0
   this.getTotalScore = function() {
     return this.totalScore;
   };
+  this.finishFrame = function() {
+    this.allFrames.push(this.frame)
+    console.log(this.allFrames)
+    return this.allFrames
+  }
   // this.bum = function() {
   //   while (this.currentFrame < 10) {
   //     console.log(this.currentFrame);
@@ -14,12 +20,11 @@ function Game() {
   //   }
   // };
   this.roll = function(pins){
-    if (this.currentFrame > 1) {
-      this.currentFrame = 0;
-    }
-    this.frame[this.currentFrame] = pins;
-    this.currentFrame ++
+    if (this.indexInFrame <= 1) {
+    this.frame[this.indexInFrame] = pins;
+    this.indexInFrame ++
     return this.frame
+    }
   };
   // this.getTotalScore=function(pins) {
   // this.frame[this.currentFrame] = pins;
